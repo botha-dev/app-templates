@@ -6,7 +6,7 @@
     "platform": "Windows",
     "logo": "",
     "repository": {
-    "url": "https://github.com/tfenster/templates",
+    "url": "https://github.com/botha-dev/app-templates",
     "stackfile": "stacks/github-runner/docker-compose.yml"
     },
     "env": [
