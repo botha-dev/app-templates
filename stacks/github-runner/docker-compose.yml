@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   runner-github-runner-windows:
-    image: tobiasfenster/github-runner-windows:1809
+    image: tobiasfenster/github-runner-windows
     deploy:
       replicas: 1
     volumes:
