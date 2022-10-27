@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  runner-github-runner-windows:
+    image: tobiasfenster/github-runner-windows:ltsc2022
+    deploy:
+      replicas: 1
+    volumes:
+      - source: '\\.\pipe\docker_engine\'
+        target: '\\.\pipe\docker_engine\'
+        type: npipe
+    environment:
+      - GITHUBREPO_OR_ORG=${REPO_OR_ORG}
+      - GITHUBPAT=${PAT}
+      - GITHUBRUNNERNAME=${RUNNER_NAME}
+
+networks:
+  default:
+    name: nat
